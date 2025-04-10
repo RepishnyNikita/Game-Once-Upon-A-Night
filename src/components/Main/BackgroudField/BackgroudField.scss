@@ -1,0 +1,16 @@
+@use '/src/style/helpers' as *;
+
+.backgroud-field{
+    height: 100%;
+    display: flex;
+    position: relative;
+
+    padding: rem(10);
+    max-width: rem(960);
+    width: 100%;
+
+    border: var(--border);border: var(--border);
+    background-color: var(--color-dark-opacity);
+    border-radius: var(--border-radius);
+
+}

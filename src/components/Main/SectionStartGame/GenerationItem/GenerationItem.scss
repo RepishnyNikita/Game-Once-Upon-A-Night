@@ -1,0 +1,8 @@
+@use '/src/style/helpers' as *;
+
+.generation-item {
+    display: flex;
+    align-items: center;
+    column-gap: rem(17);
+    font-size: rem(40);
+}

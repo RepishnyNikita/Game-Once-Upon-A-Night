@@ -1,0 +1,31 @@
+@use '/src/style/helpers' as *;
+
+.card-of-valuables{
+    padding: rem(10);
+    border-radius:var(--border-radius);
+    border: var(--border);
+    @include square(rem(75));
+    position: relative;
+
+    &-summ{
+        position: absolute;
+        font-size: rem(24);
+        bottom: rem(-6);
+        right: rem(5);
+        color: var(--color-light);
+    }
+
+    img{
+        transition: 0.3s;
+    }
+
+    &.violet{
+        background-image: var(--backgroud-gradient-violet);
+    }
+    &.green{
+        background-image: var(--backgroud-gradient-green);
+    }
+    &.gold{
+        background-image: var(--backgroud-gradient-gold);
+    }
+}

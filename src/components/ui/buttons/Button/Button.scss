@@ -1,0 +1,45 @@
+@use '/src/style/helpers' as *;
+
+.button{
+    display: flex;
+    align-items: center;
+    color: inherit;
+    column-gap: rem(15);
+    transition: 0.8s;
+
+    &-alt{
+        position: relative;
+
+        &::before{
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            @include square (rem(80));
+            border-radius: 50%;
+            z-index: -1;
+            background-color: var(--color-accent-2);
+            box-shadow: 0 0 20px 1px var(--color-accent-2);
+            
+            transition: 0.3s;
+            opacity: 0;
+        }
+
+        @include hover{
+            &::before{
+                opacity: 1;
+            }
+        }
+    }
+
+    .forward{
+        background-color: var(--color-accent-2);
+        border-radius: 50%;
+        box-shadow: 0 0 20px 1px var(--color-accent-2);
+    }
+}
+
+.forward{
+    transform: rotate(360deg);
+}

@@ -1,0 +1,25 @@
+@use '/src/style/helpers' as *;
+
+.header__energy {
+    padding: rem(3) rem(20);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: rem(240);
+    width: 100%;
+    column-gap: rem(20);
+    background-color: var(--color-green-accent);
+    border-radius: var(--border-radius);
+    border: var(--border);
+
+    &-count {
+        &__color {
+            color: var(--color-accent);
+        }
+    }
+
+    &-timer {
+        display: flex;
+        align-items: center;
+    }
+}

@@ -1,0 +1,29 @@
+@use '/src/style/helpers' as *;
+
+.setting-modal{
+    padding: rem(5) rem(15);
+    border-radius: var(--border-radius);
+    display: grid;
+    background-color: var(--color-accent);
+    border: var(--border);
+    font-size: rem(29);
+    position: absolute;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: 0.4s;
+
+
+    label{
+        display: flex;
+        column-gap: rem(10);
+    }
+
+    
+    &.is-active{
+        position: static;
+        pointer-events: all;
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

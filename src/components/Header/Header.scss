@@ -1,0 +1,44 @@
+@use '/src/style/helpers' as *;
+
+.header {
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 1rem;
+        padding-block: rem(40) rem(60);
+        position: relative;
+    }
+
+
+    &__global-timer {
+        display: flex;
+        align-items: center;
+        column-gap: rem(10);
+
+        &__value{
+            display: flex;
+            pointer-events: none;
+        }
+    }
+
+    &__statistics {
+        display: flex;
+        align-items: center;
+        column-gap: rem(20);
+
+        &-value{
+            background-color: var(--color-light-opacity);
+            border: var(--border);
+            border-radius: var(--border-radius);
+            padding: rem(3) rem(20);
+            display: flex;
+            align-items: center;
+            column-gap: rem(20);
+        }
+    }
+}
+
+
+
+

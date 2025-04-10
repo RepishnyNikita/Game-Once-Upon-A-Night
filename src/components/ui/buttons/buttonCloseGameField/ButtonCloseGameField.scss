@@ -1,0 +1,75 @@
+@use '/src/style/helpers' as *;
+
+.button-close-game-field{
+  position: absolute;
+  top: rem(15);
+  right: rem(15);
+  
+  @include hover {
+
+    &::after{
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    img{
+      scale: 0.95;
+    }
+  }
+
+  img{
+    transition: 0.3s;
+    position: relative;
+    z-index: 1;
+  }
+
+  &::after{
+    content: '';
+    position: absolute;
+    @include square(rem(48));
+    @include abs-center;
+
+    background-color:var(--color-accent);
+    border-radius: var(--border-radius);
+    border: var(--border);
+
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+  }
+
+  &.tooltip{
+    @include hover{
+      & img{
+        transform: rotate(180deg);
+      }
+
+      &::before{
+        transform: translateX(-65%);
+        opacity: 1;
+        pointer-events: all;
+        transition: 0.3s;
+      }
+    }
+
+    &::before{
+      content: ' -1 en. ';
+      position: absolute;
+      @include flex-center;
+      padding: rem(5);
+      color: var(--color-red);
+      background-color:var(--color-accent);
+      border-radius: var(--border-radius);
+      border: var(--border);
+      width: rem(100);
+      height: rem(48);
+      top: rem(-3);
+      right: 0;
+      transform: translateX(0);
+      opacity: 0;
+      pointer-events: none;
+      transition: 0.3s;
+    }
+  }
+
+}

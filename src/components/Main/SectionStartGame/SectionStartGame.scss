@@ -1,0 +1,61 @@
+@use '/src/style/helpers' as *;
+
+.start-game {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: rem(25) rem(40);
+    
+
+    &__body {
+        padding-block:rem(30);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+
+    &__generation{
+        &-random{
+            display: grid;
+            row-gap: rem(30);
+        }
+    }
+
+    &__target-search {
+        display: grid;
+        row-gap: rem(10);
+        text-align: center;
+        font-size: rem(40);
+    }
+
+    &__controls {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+    &__button-generation {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        img{
+            &.is-active{
+                @include animation-rotate;
+            }
+        }
+
+        &__count {
+            position: absolute;
+            color: var(--color-light);
+            font-size: rem(32);
+        }
+    }
+
+}
+
+
